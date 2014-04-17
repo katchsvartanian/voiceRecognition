@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ede61f0f-e6e9-46a9-8caf-112ffb9316b7}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Assembly Files %28ia32%29">
+      <UniqueIdentifier>{b4463c3d-171f-4b30-a6c9-44f300c3bac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{d166a1a1-5220-4a93-a783-6e726552af99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protected Header Files">
+      <UniqueIdentifier>{7e296878-267f-4247-9a9b-354f73e0a4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{d4f37069-19ac-4815-b0dd-19475f74a15a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ia32\nasm.h">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\all.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\bitmath.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\bitreader.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\bitwriter.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\cpu.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\crc.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\fixed.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\float.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\format.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\lpc.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\md5.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\memory.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\metadata.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\ogg_decoder_aspect.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\ogg_encoder_aspect.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\ogg_helper.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\ogg_mapping.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\stream_encoder_framing.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\private\window.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\protected\all.h">
+      <Filter>Protected Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\protected\stream_decoder.h">
+      <Filter>Protected Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\protected\stream_encoder.h">
+      <Filter>Protected Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\all.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\assert.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\export.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\format.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\metadata.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\ordinals.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\stream_decoder.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\stream_encoder.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bitmath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bitreader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bitwriter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fixed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="float.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="format.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="metadata_iterators.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="metadata_object.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ogg_decoder_aspect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ogg_encoder_aspect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ogg_helper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ogg_mapping.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_decoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_encoder_framing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ia32\bitreader_asm.nasm">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ia32\cpu_asm.nasm">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ia32\fixed_asm.nasm">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ia32\lpc_asm.nasm">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ia32\stream_encoder_asm.nasm">
+      <Filter>Source Files\Assembly Files %28ia32%29</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

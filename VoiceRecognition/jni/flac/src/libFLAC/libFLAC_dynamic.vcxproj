@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>libFLAC</SccProjectName>
+    <SccLocalPath>..\..</SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\obj\debug\lib\</OutDir>
+    <IntDir>.\Debug_dynamic\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\obj\release\lib\</OutDir>
+    <IntDir>.\Release_dynamic\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\include;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;FLAC__OVERFLOW_DETECT;FLAC_API_EXPORTS;FLAC__HAS_OGG;VERSION="1.2.1";FLAC__CPU_IA32;FLAC__HAS_NASM;FLAC__USE_3DNOW;_WINDOWS;_WINDLL;WIN32;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug_dynamic\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug_dynamic\libFLAC_dynamic.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug_dynamic\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug_dynamic\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\obj\debug\lib\libFLAC_dynamic.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\obj\debug\lib\libFLAC_dynamic.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\..\obj\debug\bin/libFLAC.dll</OutputFile>
+      <ImportLibrary>.\..\..\obj\debug\lib\libFLAC.lib</ImportLibrary>
+      <AdditionalDependencies>..\..\obj\release\lib\ogg_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.\include;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;FLAC_API_EXPORTS;FLAC__HAS_OGG;VERSION="1.2.1";FLAC__CPU_IA32;FLAC__HAS_NASM;FLAC__USE_3DNOW;_WINDOWS;_WINDLL;WIN32;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release_dynamic\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release_dynamic\libFLAC_dynamic.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release_dynamic\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release_dynamic\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\obj\release\lib\libFLAC_dynamic.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\obj\release\lib\libFLAC_dynamic.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\..\obj\release\bin/libFLAC.dll</OutputFile>
+      <ImportLibrary>.\..\..\obj\release\lib\libFLAC.lib</ImportLibrary>
+      <AdditionalDependencies>..\..\obj\release\lib\ogg_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="ia32\bitreader_asm.nasm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/bitreader_asm.nasm -o ia32/bitreader_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/bitreader_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/bitreader_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/bitreader_asm.nasm -o ia32/bitreader_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/bitreader_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/bitreader_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ia32\cpu_asm.nasm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/cpu_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/cpu_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ia32\fixed_asm.nasm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/fixed_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/fixed_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ia32\lpc_asm.nasm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/lpc_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/lpc_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ia32\stream_encoder_asm.nasm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/stream_encoder_asm.nasm -o ia32/stream_encoder_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/stream_encoder_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/stream_encoder_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/stream_encoder_asm.nasm -o ia32/stream_encoder_asm.obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/stream_encoder_asm.obj;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/stream_encoder_asm.nasm;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ia32\nasm.h" />
+    <ClInclude Include="include\private\all.h" />
+    <ClInclude Include="include\private\bitmath.h" />
+    <ClInclude Include="include\private\bitreader.h" />
+    <ClInclude Include="include\private\bitwriter.h" />
+    <ClInclude Include="include\private\cpu.h" />
+    <ClInclude Include="include\private\crc.h" />
+    <ClInclude Include="include\private\fixed.h" />
+    <ClInclude Include="include\private\float.h" />
+    <ClInclude Include="include\private\format.h" />
+    <ClInclude Include="include\private\lpc.h" />
+    <ClInclude Include="include\private\md5.h" />
+    <ClInclude Include="include\private\memory.h" />
+    <ClInclude Include="include\private\metadata.h" />
+    <ClInclude Include="include\private\ogg_decoder_aspect.h" />
+    <ClInclude Include="include\private\ogg_encoder_aspect.h" />
+    <ClInclude Include="include\private\ogg_helper.h" />
+    <ClInclude Include="include\private\ogg_mapping.h" />
+    <ClInclude Include="include\private\stream_encoder_framing.h" />
+    <ClInclude Include="include\private\window.h" />
+    <ClInclude Include="include\protected\all.h" />
+    <ClInclude Include="include\protected\stream_decoder.h" />
+    <ClInclude Include="include\protected\stream_encoder.h" />
+    <ClInclude Include="..\..\include\FLAC\all.h" />
+    <ClInclude Include="..\..\include\FLAC\assert.h" />
+    <ClInclude Include="..\..\include\FLAC\export.h" />
+    <ClInclude Include="..\..\include\FLAC\format.h" />
+    <ClInclude Include="..\..\include\FLAC\metadata.h" />
+    <ClInclude Include="..\..\include\FLAC\ordinals.h" />
+    <ClInclude Include="..\..\include\FLAC\stream_decoder.h" />
+    <ClInclude Include="..\..\include\FLAC\stream_encoder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bitmath.c" />
+    <ClCompile Include="bitreader.c" />
+    <ClCompile Include="bitwriter.c" />
+    <ClCompile Include="cpu.c" />
+    <ClCompile Include="crc.c" />
+    <ClCompile Include="fixed.c" />
+    <ClCompile Include="float.c" />
+    <ClCompile Include="format.c" />
+    <ClCompile Include="lpc.c" />
+    <ClCompile Include="md5.c" />
+    <ClCompile Include="memory.c" />
+    <ClCompile Include="metadata_iterators.c" />
+    <ClCompile Include="metadata_object.c" />
+    <ClCompile Include="ogg_decoder_aspect.c" />
+    <ClCompile Include="ogg_encoder_aspect.c" />
+    <ClCompile Include="ogg_helper.c" />
+    <ClCompile Include="ogg_mapping.c" />
+    <ClCompile Include="stream_decoder.c" />
+    <ClCompile Include="stream_encoder.c" />
+    <ClCompile Include="stream_encoder_framing.c" />
+    <ClCompile Include="window.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

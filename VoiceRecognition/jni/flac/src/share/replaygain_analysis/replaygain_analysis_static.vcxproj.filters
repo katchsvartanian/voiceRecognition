@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1bde37bf-14d1-4b88-b81e-4fd1138f4c9e}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{b3c1de31-46f0-4389-af0f-5f301e317b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{b5339876-baa2-4b94-9ef5-81f8ae1e9707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protected Header Files">
+      <UniqueIdentifier>{a9994222-adbb-448c-ae4c-4035eca378e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="replaygain_analysis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\share\replaygain_analysis.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

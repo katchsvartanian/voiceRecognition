@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/record"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="RECORD IN ENGLISH!"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </TextView>
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:enabled="true"
+        android:onClick="recordButton"
+        android:text="Record" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:onClick="stopRecording"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:onClick="listenRecord"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:enabled="false"
+        
+        android:text="Listen" />
+
+</RelativeLayout>

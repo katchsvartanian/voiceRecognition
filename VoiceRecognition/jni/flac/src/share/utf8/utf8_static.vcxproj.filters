@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{cea225ed-7110-437d-bee9-6036dec48c8b}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{f2a6adc4-a8ac-4988-a0b2-6656c91f5fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{c7fb1f8c-5ca9-425c-bf3f-8ef1c6fdf121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protected Header Files">
+      <UniqueIdentifier>{6b6c9c69-a784-44e2-a09a-454a0ff6cbc7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="charset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iconvert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\share\utf8.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

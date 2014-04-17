@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3ba5809d-b30c-46ca-a5d1-422b3d82f0ea}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Winamp2 SDK">
+      <UniqueIdentifier>{ec54c8e3-7046-43ef-b478-0421f553193d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\winamp2\in2.h">
+      <Filter>Source Files\Winamp2 SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="include\winamp2\out.h">
+      <Filter>Source Files\Winamp2 SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="configure.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="infobox.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playback.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tagz.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="configure.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="in_flac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="infobox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tagz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

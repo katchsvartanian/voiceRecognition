@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{49880a08-305e-4cde-8d46-1ebe00660312}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{00014ff3-f87c-4f2b-8326-6037cc3bf538}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations_shorthand_cuesheet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations_shorthand_picture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations_shorthand_seektable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations_shorthand_streaminfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operations_shorthand_vorbiscomment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="operations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

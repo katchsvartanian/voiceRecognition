@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2beb4b5e-8936-4e70-bfe4-9fa547a17991}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{890988a7-8477-465f-8faa-833b717ddc0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{a19d1d4c-421f-43ef-aafe-726f66cbb9d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protected Header Files">
+      <UniqueIdentifier>{74e45054-5af8-4244-a505-0d5967cd2d50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cuesheet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="picture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="replaygain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seektable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\share\grabbag\cuesheet.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\grabbag\file.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\grabbag\picture.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\grabbag\replaygain.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\grabbag\seektable.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\grabbag.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{782d1cda-7e97-407b-8538-1c2d0217f003}</UniqueIdentifier>
+      <Extensions>c</Extensions>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{7325bab1-97f8-4d58-9980-d17bb17a9aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Header Files">
+      <UniqueIdentifier>{3cdc72b4-8d7f-42f1-b130-0ff23021f684}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="replaygain_synthesis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\private\fast_float_math_hack.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\share\replaygain_synthesis.h">
+      <Filter>Public Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
